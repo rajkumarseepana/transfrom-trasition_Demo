@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: bisque;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Space between letter groups */
+}
+
+.letters {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    /* Adjust spacing between letters */
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.letters p {
+    text-align: center;
+    background-color: rgb(250, 150, 100);
+    font-style: bold;
+    font-weight: 500;
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    /* Ensure letters are perfectly square */
+    line-height: 70px;
+    /* Center text vertically */
+    margin: 0;
+    /* Remove margin */
+    border-radius: 15%;
+    /* Rounded corners */
+    border: 2px solid rgb(250, 125, 75);
+    /* Add consistent border width */
+}
+
+.letters:hover p:nth-child(even) {
+    transform: rotateY(360deg);
+    transition: transform 0.5s ease-in-out;
+    /* Smooth rotation */
+}
+
+.letters:hover p:nth-child(odd) {
+    transform: rotateX(360deg);
+    transition: transform 1.5s ease-in-out;
+    /* Smooth and slower rotation */
+}
